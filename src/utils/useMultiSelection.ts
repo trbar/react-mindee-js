@@ -19,7 +19,8 @@ export default function useMultiSelection({
         event.ctrlKey ||
         event.altKey ||
         event.key === 'Control' ||
-        event.key === 'Alt'
+        event.key === 'Alt' ||
+        event.metaKey
       ) {
         stage?.draggable(false)
         isSelectionActiveRef.current = true
@@ -34,7 +35,8 @@ export default function useMultiSelection({
         event.ctrlKey ||
         event.altKey ||
         event.key === 'Control' ||
-        event.key === 'Alt'
+        event.key === 'Alt' ||
+        event.metaKey
       ) {
         stage?.draggable(true)
         isSelectionActiveRef.current = false
